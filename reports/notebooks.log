@@ -34,6 +34,6 @@ Here is a preview of the cell contents:
 -------------------
 ['from Sastrawi.Stemmer.StemmerFactory import StemmerFactory', 'import swifter', '', 'factory = StemmerFactory()', 'stemmer = factory.create_stemmer()']
 ...
-['  term_dict[term] = stemmed_wrapper(term)', "  print(term,':',term_dict[term])", '', 'print(term_dict)', 'print("------------------------")']
+['for term in term_dict:', '  term_dict[term] = stemmed_wrapper(term)', '', 'print(term_dict)', 'print("------------------------")']
 -------------------
 
