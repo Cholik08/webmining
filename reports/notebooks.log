@@ -32,8 +32,14 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['from Sastrawi.Stemmer.StemmerFactory import StemmerFactory', 'import swifter', '', 'factory = StemmerFactory()', 'stemmer = factory.create_stemmer()']
-...
-['for term in term_dict:', '  term_dict[term] = stemmed_wrapper(term)', '', 'print(term_dict)', 'print("------------------------")']
+import twint
+c = twint.Config()
+
+c.Since = '2022-10-11'
+c.Until = '2022-10-12'
+c.Search = 'tragedi kanjuruhan'
+c.Output = 'data_tweet.csv'
+
+twint.run.Search(c)
 -------------------
 
